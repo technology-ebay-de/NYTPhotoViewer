@@ -52,6 +52,7 @@ static const CGFloat NYTPhotoTransitionAnimatorSpringDamping = 0.9;
     self.fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     toView.frame = [transitionContext finalFrameForViewController:self.toViewController];
+    [toView layoutIfNeeded];
     [self.toViewController beginAppearanceTransition:YES animated:YES];
     [self.fromViewController beginAppearanceTransition:NO animated:YES];
     
